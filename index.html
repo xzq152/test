@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+	<meta charset="utf-8">
+	<title>JS/jQuery图片查看器viewer.js演示-默认效果_dowebok</title>
+	<link rel="stylesheet" href="css/viewer.min.css">
+	<style>
+		.imgs{
+			display: none
+		}
+	</style>
+</head>
+
+<body>
+	<h1 class="dowebok" onclick="opens()"  src="img/tibet-1.jpg">默认效果</h1>
+
+	<div>
+		<img class="dowebok imgs" data-original="img/tibet-1.jpg" src="img/tibet-1.jpg" alt="图片1">
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/viewer-jquery.min.js"></script>
+	<script>
+		function opens(){
+			$('.imgs').viewer({
+				url:  $(this).attr('src'),
+			});
+		}
+		$(function () {
+			$('.dowebok').viewer({
+				url:  $(this).attr('src'),
+			});
+		})
+	</script>
+</body>
+
+</html>
